@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Treatment
- * 
+ *
  * @property int $id
  * @property string $description
  * @property string|null $notes
@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int|null $price
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ *
  * @property Patient $patient
  *
  * @package App\Models
@@ -28,9 +28,11 @@ class Treatment extends Model
 {
 	protected $table = 'treatments';
 
+    public $test = 'test';
+
 	protected $casts = [
 		'patient_id' => 'int',
-		'price' => 'int'
+		'price' => 'float'
 	];
 
 	protected $fillable = [
